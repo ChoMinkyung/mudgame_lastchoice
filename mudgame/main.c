@@ -35,7 +35,7 @@ int main()
 	SetConsoleTitle(TEXT("Last Choice"));
 	//system("cls");
 	gotoxy(0, 5);
-	printf_txt("intro_logo.txt"); //로고 출력
+	//printf_txt("intro_logo.txt"); //로고 출력
 
 	//gotoxy(myX, myY);
 	//printf("ㅁㅁㅁ");
@@ -99,11 +99,11 @@ void time_count(int second)
 
 	while (1)
 	{
-		gotoxy(COLS-17, 1);
+		gotoxy(COLS-20, 5);
 		printf("남은 시간 : %d초\n", second); // x: 전체-17
 		Sleep(1000); // 1초 지연
 
-		gotoxy(COLS - 17, 1);
+		gotoxy(COLS - 20, 5);
 		printf("                \n");
 		second -= 1; // 1초씩 카운트
 
