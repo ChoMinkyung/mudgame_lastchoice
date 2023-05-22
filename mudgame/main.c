@@ -16,20 +16,34 @@ int main()
 	what Item;
 	where place = LIVING_ROOM;
 
+	int cols = 80, lines = 30;
 	// 초기 화면 설정
-	system("mode con: cols=100 lines=30");  //cols = 칸/행 (가로)  lines = 줄/열 (세로)
+	system("mode con: cols=80 lines=30");  //cols = 칸/행 (가로)  lines = 줄/열 (세로)
 	SetConsoleTitle(TEXT("Last Choice"));
 	CursorView(false);
-
-	// 시작 페이지 출력
-	//PrintfText("intro_logo.txt"); //로고 출력
 	
+	// 메뉴 선택
+	int cursor_loc = -1;
+	int* pCL = &cursor_loc;
+	int start = 0;
+	int* pS = &start;
 
-	// 각 장소에 랜덤으로 아이템 배정
+	//PrintfText("map.txt", 10, 5);
+	PrintMap();
+	/*
+	
+	DrawLines(cols, lines);
+	DrawStart(cols, lines, pCL, pS);
+
+	// 게임 시작
+	DrawLines(cols, lines);
+
+	// 아이템 선택 - 각 장소에 랜덤으로 아이템 배정
 	ItemRandom();
-
 	// 60초 동안 아이템 선택
-	ItemChoice();
+	//TimeCount(60);
+
+	ItemChoice(cols, lines);
 	//printf("선택이 종료되었습니다.\n");
 
 	// 방공호에서 10일
@@ -40,5 +54,7 @@ int main()
 
 	//게임 끝
 	//printf_txt("logo.txt"); //로고 출력
+	*/
 }
+
 

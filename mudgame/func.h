@@ -1,4 +1,3 @@
-
 typedef enum {
 	empty, soup, water, map, gas_mask, radio, ax, book, checker_board, card, gun, flashlight, first_aid_kit, bottle, megaphone
 }what;
@@ -6,8 +5,6 @@ typedef enum {
 typedef enum {
 	LIVING_ROOM, BED_ROOM, DIVING_ROOM, BATH_ROOM, SHELTER
 }where;
-
-
 
 int TimeCount(int second);
 
@@ -18,9 +15,11 @@ int PrintfItem(int place, int item);
 void PrintfPlace(int place);
 void PrintfPlaceItem(where place);
 void SetColor(int color);
+void PrintBag(int* pNitem);
+void PrintMap();
 
 void ItemRandom();
-void ItemChoice();
+void ItemChoice(int cols, int liens);
 void ItemChoiceInPlace(int* pMybag, where place, int* pNitem);
 
 void SortZero(where place);
@@ -62,3 +61,9 @@ SetColor(BLACK); printf("BLACK\n");
 	SetColor(YELLOW); printf("YELLOW\n");
 	SetColor(WHITE); printf("WHITE\n");
 */
+
+void DrawLines(int cols, int lines);
+void DrawStart(int cols, int lines, int* pCL, int* pS);
+void PrintHow(int cols, int lines);
+void MenuChoice(int cols, int lines, int* pCL, int* pS);
+int KeyControl();
