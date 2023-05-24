@@ -31,7 +31,7 @@ int main()
 	int* pHp = &hp;
 
 	
-	/*
+	
 	DrawLines(cols, lines);
 	DrawStart(cols, lines, pCL, pS, 5);
 
@@ -47,8 +47,8 @@ int main()
 	// 방공호에서 10일
 	ShelterPage(cols, lines, pHp);
 	system("cls");
+
 	
-	*/
 	//게임 끝
 	if (hp == 0)
 	{
