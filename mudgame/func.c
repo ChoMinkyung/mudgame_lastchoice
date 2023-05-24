@@ -513,7 +513,7 @@ void PrintHow(int cols, int lines, int plus_line)
 	DrawLines(cols, lines);
 
 	SetColor(DarkSkyBlue);
-	PrintfText("intro_logo.txt", 5 , 2 + plus_line); //로고 출력
+	PrintfText("rex.txt", 5 , 2 + plus_line); //로고 출력
 	SetColor(WHITE);
 	char intro_lines[5][200] = { "가방에는 최대 4개까지만 아이템을 담을 수 있습니다.",
 		 "가방이 꽉 차면 방공호에 내려놓아야 합니다." ,
