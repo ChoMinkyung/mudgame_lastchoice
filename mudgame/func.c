@@ -303,7 +303,6 @@ void PrintBag(int* pNitem, int plus_line)
 	printf("\n");
 }
 
-
 // Place에서 Item 선택하는 함수
 void ItemChoiceInPlace(int* pMybag, where place, int* pNitem, int cols, int lines, int plus_line)
 {
