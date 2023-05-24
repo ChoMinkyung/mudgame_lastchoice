@@ -3,26 +3,35 @@ typedef enum {
 }what;
 
 typedef enum {
-	LIVING_ROOM, BED_ROOM, DIVING_ROOM, BATH_ROOM, SHELTER
+	LIVING_ROOM=1, BED_ROOM, DINING_ROOM, BATH_ROOM, SHELTER
 }where;
 
-int TimeCount(int second);
+unsigned _stdcall TimeCount();
 
 void gotoxy(int x, int y);
-void PrintfText(char* file_name);
+void PrintfText(char* file_name, int cols, int lines);
 void CursorView(bool show);
-int PrintfItem(int place, int item);
+int PrintfItem(int item);
 void PrintfPlace(int place);
-void PrintfPlaceItem(where place);
+void PrintfPlaceItem(where place, int plus_lines);
 void SetColor(int color);
-void PrintBag(int* pNitem);
-void PrintMap();
+void PrintBag(int* pNitem, int plus_line);
+void PrintMap(int cols, int lines, where place, int plus_line);
+void PrintMyItem();
 
 void ItemRandom();
-void ItemChoice(int cols, int liens);
-void ItemChoiceInPlace(int* pMybag, where place, int* pNitem);
+void ItemChoice(int cols, int liens, int plus_line);
+void ItemChoiceInPlace(int* pMybag, where place, int* pNitem, int cols, int lines, int plus_line);
+void PutItemInShelter(int* pMybag, where place, int* pNitem, int cols, int lines, int plus_line);
+void PrintHp(int hp);
 
 void SortZero(where place);
+
+void EventRandom(int* pHp, int plus_line);
+
+void PrintfEvent(int number, int* pHp, int plus_line);
+
+void PrintHp(int hp);
 
 enum ColorType {
 	BLACK,  	//0
@@ -63,7 +72,7 @@ SetColor(BLACK); printf("BLACK\n");
 */
 
 void DrawLines(int cols, int lines);
-void DrawStart(int cols, int lines, int* pCL, int* pS);
-void PrintHow(int cols, int lines);
-void MenuChoice(int cols, int lines, int* pCL, int* pS);
+void DrawStart(int cols, int lines, int* pCL, int* pS, int plus_line);
+void PrintHow(int cols, int lines, int plus_line);
+void MenuChoice(int cols, int lines, int* pCL, int* pS, int plus_line);
 int KeyControl();
